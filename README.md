@@ -1,4 +1,4 @@
-# PhrasalVerbs2
+# PhrasalVerbs
 Topic addressed by the project: Education
 
 Goal: Make you know phrasal verbs permanently
