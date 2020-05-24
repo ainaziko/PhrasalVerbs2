@@ -1,8 +1,4 @@
 package sample;
-
-//import com.gluonhq.charm.glisten.control.TextField;
-
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -51,25 +47,24 @@ public class Controller  {
 
     @FXML
     void check(ActionEvent event) {
-
     }
 
     @FXML
-    void startButtonE(ActionEvent event) {
-    }
+    void startButtonE(ActionEvent event) {}
 
     @FXML
     private ProgressIndicator progress;
-
+// Word that appears in Label
     String currentWord = getRandomWord();
-    static double i = 0;
+    static double i = 0; // counter variable for Progress Bar
+
 
     @FXML
     void initialize() {
-        startButton.setOnAction(e-> updateAtFirst());
-        checkButton.setOnAction(e-> check());
-        nextButton.setOnAction(e-> update());
-        userInput.setOnKeyPressed(event -> {
+        startButton.setOnAction(e-> updateAtFirst()); // setting a function for Start button
+        checkButton.setOnAction(e-> check());// setting a function for button that checks if the user answered
+        nextButton.setOnAction(e-> update());// same here
+        userInput.setOnKeyPressed(event -> { // making Enter button on keyboard usable (if user presses Enter button on keyboard method check() will be implemented)
             KeyCode keycode = event.getCode();
             if(keycode == KeyCode.ENTER){
                 check();
@@ -78,7 +73,7 @@ public class Controller  {
 
     }
 
-    public void updateAtFirst() {
+    public void updateAtFirst() { // this method is used after starting
         String word = getRandomWord();
         currentWord = word;
         int stopRussian = word.indexOf("-");
@@ -90,11 +85,9 @@ public class Controller  {
         checkButton.setVisible(true);
         userInput.setVisible(true);
         progress.setVisible(true);
-
-        //userInput.setText(currentWord.substring(stopRussian + 1, currentWord.length() ));
     }
 
-    public void check(){
+    public void check(){ // this method checks user's answer
         int stopRussian = currentWord.indexOf("-");
         if(stopRussian == -1){
             update();
@@ -104,8 +97,8 @@ public class Controller  {
             if (!userAnswer.equals(engVersion)) {
                 i = 0;
                 progress.setProgress(i);
-                Shake shakeTextField = new Shake(userInput);
-                shakeTextField.PlayAnim();
+                Shake shakeTextField = new Shake(userInput); // creating an object shakeTextField
+                shakeTextField.PlayAnim(); // shaking the Text Field
                 userInput.setStyle("-fx-text-fill: red; -fx-font-size: 16px;");
                 userInput.setDisable(true);
                 userInput.setText(engVersion);
@@ -121,7 +114,7 @@ public class Controller  {
 
     }
 
-    public void update() {
+    public void update() {//this method updates the question
         userInput.setDisable(false);
         checkButton.setVisible(true);
         nextButton.setVisible(false);
@@ -138,10 +131,10 @@ public class Controller  {
     }
 
 
-    public String getRandomWord(){
+    public String getRandomWord(){ // gets a random word from txt file
         ArrayList listOfWords = new ArrayList();
         try {
-            //File myObj = new File("/Users/mac/Desktop/russanVersionOfPhrasalVerbs.txt"); //reading a file
+             //reading a file
             File myObj = new File("/Users/mac/Desktop/russanVersionOfPhrasalVerbs.txt");
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
