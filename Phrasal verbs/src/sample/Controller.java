@@ -92,7 +92,7 @@ public class Controller  {
         if(stopRussian == -1){
             update();
         } else {
-            String userAnswer = userInput.getText().trim();
+            String userAnswer = userInput.getText().trim().toLowerCase();
             String engVersion = currentWord.substring(stopRussian + 1).trim();
             if (!userAnswer.equals(engVersion)) {
                 i = 0;
