@@ -3,7 +3,7 @@ Topic addressed by the project: Education
 
 Goal: Make you know phrasal verbs permanently
 
-Objectives: Heplp people starting to speak eloquently
+Objectives: Hepl people starting to speak eloquently
 
 Estimated budget: Free
 
