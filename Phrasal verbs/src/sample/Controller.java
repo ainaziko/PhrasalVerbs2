@@ -143,7 +143,7 @@ public class Controller  {
             }
             myReader.close();
         } catch (FileNotFoundException e) {
-            System.out.println("An error occurred.");
+            System.out.println("An error occurred: " + e);
             e.printStackTrace();
         }
         //getting a random word from a list
