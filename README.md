@@ -20,7 +20,7 @@ e-mail : ainazik.momunalieva @iaau.edu.kg;
 
 mobile : +996706424748;
 
-
+To run this app you need java version 14 and javafx 14
 
 # Project proposal
 
