@@ -20,6 +20,13 @@ e-mail : ainazik.momunalieva @iaau.edu.kg;
 
 mobile : +996706424748;
 
+# Uml Diagrams
+
+<img src="https://sun9-36.userapi.com/c857536/v857536895/205f5b/ICGukh4Uh0g.jpg" width="500">
+
+<img src="https://sun9-37.userapi.com/c857536/v857536895/205f63/uhBlgxMUQHY.jpg" width="500">
+
+
 # To run this app you need java version 14 and javafx 14
 
 # Project proposal
